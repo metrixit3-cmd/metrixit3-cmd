@@ -1,33 +1,60 @@
-name: Generate Profile Art Card
+name: Generate GitASCII Profile
 
 on:
   push:
-    paths:
-      - 'gitascii.json'
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository Code
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js Environment
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
-      - name: Install Profile Generator Tool
-        run: npm install -g @gitascii/cli || npm install -g gitascii
-
-      - name: Compile JSON configuration to SVG Asset
-        run: gitascii build --config gitascii.json --output info-card.svg
+      - name: Convert gitascii.json to SVG
+        run: |
+          node -e '
+          const fs = require("fs");
+          try {
+            const data = JSON.parse(fs.readFileSync("gitascii.json", "utf8"));
+            const asciiText = data.ascii || data.art || data.content || JSON.stringify(data, null, 2);
+            const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+            <style>
+              .bg { fill: #0d1117; rx: 8px; }
+              .header { fill: #161b22; rx: 8px 8px 0 0; }
+              .btn-red { fill: #ff5f56; }
+              .btn-yellow { fill: #ffbd2e; }
+              .btn-green { fill: #27c93f; }
+              .title { font-family: monospace; fill: #8b949e; font-size: 13px; text-anchor: middle; }
+              .ascii { font-family: "Courier New", Courier, monospace; font-size: 3.5px; fill: #3fb950; white-space: pre; text-anchor: start; }
+            </style>
+            <rect class="bg" width="800" height="520" />
+            <rect class="header" width="800" height="35" />
+            <circle class="btn-red" cx="20" cy="18" r="6" />
+            <circle class="btn-yellow" cx="40" cy="18" r="6" />
+            <circle class="btn-green" cx="60" cy="18" r="6" />
+            <text class="title" x="400" y="22">metrixit3@github: ~ $ ./portrait.sh</text>
+            <text class="ascii" x="15" y="55" xml:space="preserve"><![CDATA[${asciiText}]]></text>
+          </svg>`;
+            fs.writeFileSync("info-card.svg", svgContent);
+            console.log("Successfully generated info-card.svg");
+          } catch (err) {
+            console.error("Error generating SVG:", err);
+            process.exit(1);
+          }
+          '
 
       - name: Commit and Push Compiled Asset
         run: |
           git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@://github.com"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add info-card.svg
-          git commit -m "chore: auto-regenerate profile card artwork" || exit 0
+          git commit -m "chore: auto-generate ascii profile card" || exit 0
           git push
