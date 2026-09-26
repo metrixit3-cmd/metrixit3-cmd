@@ -1,7 +1,7 @@
 # ⚡ Welcome to my Digital Workspace! 
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=28&duration=3000&pause=1000&color=00FF00&center=true&vCenter=true&width=800&lines=Full+Stack+%26+Backend+Developer;System+Designer;AI+Engineer;Cloud+Architect" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=28&duration=3000&pause=1000&color=00FF00&center=true&vCenter=true&width=800&lines=Full+Stack+%26+Backend+Developer;System+Design+Enthusiast;AI+%26+Cloud+Native+Engineer" alt="Typing SVG" />
 </p>
 
 ---
@@ -23,7 +23,7 @@
 ---
 
 ### 👨‍💻 Who am I?
-I am a **Full Stack & Backend Developer** obsessed with architecture, efficiency, and scale. **"I don't just write code. I build scalable solutions that solve real-world problems."** By blending data-driven insights with system design, I create intelligent solutions for tomorrow's challenges.
+I am a **Full Stack & Backend Developer** obsessed with architecture, efficiency, and scale. **"I don't just write code. I build scalable solutions that solve real-world problems."** By blending data science fundamentals with software engineering excellence, I create intelligent, production-grade systems.
 
 ---
 
