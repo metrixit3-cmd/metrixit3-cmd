@@ -1,16 +1,16 @@
 # ⚡ Welcome to my Digital Workspace! 
 
 <p align="center">
-  <img src="./info-card.svg?v=4" alt="Terminal Art Banner" width="100%" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=28&duration=3000&pause=1000&color=00FF00&center=true&vCenter=true&width=800&lines=Full+Stack+%26+Backend+Developer;System+Design+Enthusiast;AI+%26+Cloud+Native+Engineer" alt="Terminal Art Banner" />
 </p>
 
 ### 👨‍💻 Who am I?
-I am a **Full Stack & Backend Developer** obsessed with architecture, efficiency, and scale. **"I don't just write code. I build scalable solutions that solve real-world problems."** By blending data science principles with modern backend technologies, I design software engineered to perform.
+I am a **Full Stack & Backend Developer** obsessed with architecture, efficiency, and scale. **"I don't just write code. I build scalable solutions that solve real-world problems."** By blending data-driven insights with clean architecture, I craft systems that scale.
 
 ---
 
 ### 🚀 What I'm Up To
-* 🎓 **B.Tech in Data Science (2023–2027)** • MORINGA SCHOOL OF TECHONOLGY 
+* 🎓 **B.Tech in Data Science (2023–2027)** • MORINGA SCHOOL OF TECHNOLOGY 
 * 💻 **Software Engineering** • Building production-ready software, intelligent AI-powered solutions, and robust cloud infrastructure.
 * 📹 **Tech Content Creation** • Sharing open-source development resources and advanced programming knowledge with the dev community.
 
@@ -32,7 +32,7 @@ I am currently deep-diving into high-performance computing, advanced infrastruct
 ---
 
 <p align="center">
-  <img src="https://vercel.app" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=metrixit3-cmd&show_icons=true&theme=dark&hide_border=true" alt="GitHub Stats" />
 </p>
 
 <p align="center">
