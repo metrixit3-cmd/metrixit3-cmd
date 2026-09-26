@@ -32,7 +32,11 @@ I am currently deep-diving into high-performance computing, advanced infrastruct
 ---
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=metrixit3-cmd&show_icons=true&theme=dark&hide_border=true" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=metrixit3-cmd&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&text_color=58a6ff&title_color=58a6ff" alt="GitHub Stats" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=metrixit3-cmd&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&text_color=58a6ff&title_color=58a6ff" alt="Top Languages" />
 </p>
 
 <p align="center">
