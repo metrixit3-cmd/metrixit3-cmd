@@ -11721,30 +11721,6 @@
       "zIndex": 12
     },
     {
-      "instanceId": "widget_1790432172599",
-      "widgetId": "premium-ascii-insights",
-      "name": "Premium-ascii-insights Widget",
-      "position": {
-        "x": 392,
-        "y": 1377
-      },
-      "size": {
-        "width": 400,
-        "height": 280
-      },
-      "config": {
-        "lockAspectRatio": true,
-        "transparentBackground": true,
-        "backgroundColor": "transparent",
-        "accentColor": "#3fb950",
-        "secondaryColor": "#39c5cf",
-        "borderColor": "#30363d"
-      },
-      "locked": false,
-      "visible": true,
-      "zIndex": 13
-    },
-    {
       "instanceId": "widget_1790432211240",
       "widgetId": "asciiprofile-portrait",
       "name": "Asciiprofile-portrait Widget",
