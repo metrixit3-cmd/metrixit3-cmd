@@ -1,4 +1,8 @@
-![GitASCII Profile](./info-card.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/metrixit3-cmd/metrixit3-cmd/gitascii/profiles/default/dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/metrixit3-cmd/metrixit3-cmd/gitascii/profiles/default/light.svg">
+  <img alt="GitAscii Profile" src="https://raw.githubusercontent.com/metrixit3-cmd/metrixit3-cmd/gitascii/profiles/default/dark.svg" width="100%">
+</picture>
 # ⚡ Welcome to my Digital Workspace! 
 
 <p align="center">
