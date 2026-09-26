@@ -24,29 +24,55 @@ jobs:
           const fs = require("fs");
           try {
             const data = JSON.parse(fs.readFileSync("gitascii.json", "utf8"));
-            const asciiText = data.ascii || data.art || data.content || JSON.stringify(data, null, 2);
-            const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
-            <style>
-              .bg { fill: #0d1117; rx: 8px; }
-              .header { fill: #161b22; rx: 8px 8px 0 0; }
-              .btn-red { fill: #ff5f56; }
-              .btn-yellow { fill: #ffbd2e; }
-              .btn-green { fill: #27c93f; }
-              .title { font-family: monospace; fill: #8b949e; font-size: 13px; text-anchor: middle; }
-              .ascii { font-family: "Courier New", Courier, monospace; font-size: 3.5px; fill: #3fb950; white-space: pre; text-anchor: start; }
-            </style>
-            <rect class="bg" width="800" height="520" />
-            <rect class="header" width="800" height="35" />
-            <circle class="btn-red" cx="20" cy="18" r="6" />
-            <circle class="btn-yellow" cx="40" cy="18" r="6" />
-            <circle class="btn-green" cx="60" cy="18" r="6" />
-            <text class="title" x="400" y="22">metrixit3@github: ~ $ ./portrait.sh</text>
-            <text class="ascii" x="15" y="55" xml:space="preserve"><![CDATA[${asciiText}]]></text>
-          </svg>`;
+            
+            // Extract ASCII text from the widget config
+            let asciiLines = [];
+            if (data.widgets && Array.isArray(data.widgets)) {
+              const asciiWidget = data.widgets.find(w => w.widgetId === "ascii-art");
+              if (asciiWidget && asciiWidget.config && Array.isArray(asciiWidget.config.asciiText)) {
+                asciiLines = asciiWidget.config.asciiText.slice(0, 60); // Limit to first 60 lines for performance
+              }
+            }
+            
+            const asciiText = asciiLines.length > 0 
+              ? asciiLines.map(line => line.replace(/</g, "&lt;").replace(/>/g, "&gt;")).join("\n")
+              : "GitASCII Profile - ASCII art generation in progress...";
+            
+            // Calculate dimensions based on line count
+            const lineCount = asciiLines.length;
+            const height = Math.max(400, lineCount * 8 + 100);
+            
+            const svgContent = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="${height}" viewBox="0 0 1200 ${height}">
+  <defs>
+    <style>
+      .bg { fill: #0d1117; }
+      .header { fill: #161b22; }
+      .btn-red { fill: #ff5f56; }
+      .btn-yellow { fill: #ffbd2e; }
+      .btn-green { fill: #27c93f; }
+      .title { font-family: "Monaco", "Courier New", monospace; fill: #8b949e; font-size: 12px; }
+      .ascii { font-family: "Courier New", "Courier", monospace; font-size: 7px; fill: #3fb950; white-space: pre; line-height: 1.2; }
+    </style>
+  </defs>
+  
+  <rect class="bg" width="1200" height="${height}" />
+  <rect class="header" width="1200" height="40" rx="8" ry="8" />
+  
+  <circle class="btn-red" cx="20" cy="22" r="6" />
+  <circle class="btn-yellow" cx="45" cy="22" r="6" />
+  <circle class="btn-green" cx="70" cy="22" r="6" />
+  
+  <text class="title" x="600" y="28" text-anchor="middle">metrixit3@github: ~ $ portrait.sh</text>
+  
+  <text class="ascii" x="20" y="70" xml:space="preserve"><![CDATA[${asciiText}]]></text>
+</svg>`;
+            
             fs.writeFileSync("info-card.svg", svgContent);
-            console.log("Successfully generated info-card.svg");
+            console.log("✅ Successfully generated info-card.svg");
+            console.log(`📊 Rendered ${lineCount} ASCII art lines`);
           } catch (err) {
-            console.error("Error generating SVG:", err);
+            console.error("❌ Error generating SVG:", err);
             process.exit(1);
           }
           '
@@ -56,5 +82,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add info-card.svg
-          git commit -m "chore: auto-generate ascii profile card" || exit 0
-          git push
+          git commit -m "chore: auto-generate ascii profile card" || echo "No changes to commit"
+          git push || echo "Push failed, continuing anyway"
