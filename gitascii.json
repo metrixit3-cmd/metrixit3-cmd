@@ -23390,7 +23390,7 @@
       "name": "Github-readme-stats Widget",
       "position": {
         "x": 0,
-        "y": 4436
+        "y": 4180
       },
       "size": {
         "width": 390,
@@ -23407,7 +23407,7 @@
       "name": "Streak-stats Widget",
       "position": {
         "x": 0,
-        "y": 4662
+        "y": 4406
       },
       "size": {
         "width": 390,
@@ -23424,7 +23424,7 @@
       "name": "Profile-trophy Widget",
       "position": {
         "x": 0,
-        "y": 4856
+        "y": 4600
       },
       "size": {
         "width": 800,
@@ -23441,7 +23441,7 @@
       "name": "Contribution-snake Widget",
       "position": {
         "x": 0,
-        "y": 5072
+        "y": 4816
       },
       "size": {
         "width": 800,
@@ -23458,7 +23458,7 @@
       "name": "Views-counter Widget",
       "position": {
         "x": 4,
-        "y": 5334
+        "y": 5078
       },
       "size": {
         "width": 200,
@@ -23475,7 +23475,7 @@
       "name": "Readme-quotes Widget",
       "position": {
         "x": 300,
-        "y": 5442
+        "y": 5186
       },
       "size": {
         "width": 500,
@@ -23492,7 +23492,7 @@
       "name": "Awesome-badge Widget",
       "position": {
         "x": 184,
-        "y": 5338
+        "y": 5082
       },
       "size": {
         "width": 360,
@@ -23509,7 +23509,7 @@
       "name": "Ghstats Widget",
       "position": {
         "x": 400,
-        "y": 5652
+        "y": 5396
       },
       "size": {
         "width": 390,
