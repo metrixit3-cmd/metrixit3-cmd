@@ -1,3 +1,4 @@
+![GitASCII Profile](./info-card.svg)
 # ⚡ Welcome to my Digital Workspace! 
 
 <p align="center">
