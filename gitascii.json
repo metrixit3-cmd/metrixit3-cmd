@@ -23385,23 +23385,6 @@
       "zIndex": 22
     },
     {
-      "instanceId": "widget_1790432838746",
-      "widgetId": "minecraft-chat",
-      "name": "Minecraft-chat Widget",
-      "position": {
-        "x": 0,
-        "y": 4180
-      },
-      "size": {
-        "width": 480,
-        "height": 240
-      },
-      "config": {},
-      "locked": false,
-      "visible": true,
-      "zIndex": 23
-    },
-    {
       "instanceId": "widget_1790432880664",
       "widgetId": "github-readme-stats",
       "name": "Github-readme-stats Widget",
