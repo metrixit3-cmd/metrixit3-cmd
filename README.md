@@ -121,15 +121,6 @@ I'm deep-diving into advanced topics that define modern backend development:
 
 ---
 
-## 📊 GitHub Analytics
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=metrixit3-cmd&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&text_color=58a6ff&title_color=00FF00&icon_color=58a6ff&ring_color=00FF00" alt="GitHub Stats" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=metrixit3-cmd&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&text_color=58a6ff&title_color=00FF00" alt="Top Languages" width="48%" />
-</p>
-
----
-
 ## 🎓 Education & Certifications
 
 * **B.Tech in Data Science** – Moringa School of Technology (2023–2027)
