@@ -23447,9 +23447,7 @@
         "width": 800,
         "height": 250
       },
-      "config": {
-        "branch": "gitascii"
-      },
+      "config": {},
       "locked": false,
       "visible": true,
       "zIndex": 27
